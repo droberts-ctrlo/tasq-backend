@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: backend
+  profiles:
+    active: dev
+---
+spring:
+  configuration:
+    activate:
+      on-profile: dev
+  flyway:
+    enabled: false
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
